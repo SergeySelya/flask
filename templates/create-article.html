@@ -5,5 +5,16 @@
 
     <h1>create article</h1>
     <form method="post"></form>
+    <div class="container">
+        {% for el in articles %}
+        <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.intro }}</p>
+            <p><b>{{ el.date.date() }}</b></p>
+            <button>Детали</button>
+        </div>
+        {% endfor %}
+    </div>
+
 
 {%endblock%}
